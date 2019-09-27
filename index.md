@@ -277,11 +277,18 @@ Source: Wikicommons.
 >* Han har ikke gjort en flue fortred.
 >* "Ikke øl i en sådan stund, rekk meg Løiten" (Nils Arne Eggen, 1996).
 
+***
+
+### Ironi
+
+>* feel so blessed to get ocular migraines
+>* van Hee (2017)
+
 --- &vertical
 ## Strukturelle forskjeller på fiksjon og faksjon
 
 > * Fordi litteratur er ordets kunst er oppgaven per definisjon den vanskligste (Chapman   1973).
-> * Jonathan Slocum (1985) avviste idéen.  Relativt lite har vært gjort.
+> * Slocum (1985) avviste idéen.  Relativt lite har vært gjort.
 > * Korpuslingvistiske mål kan brukes, e.g. antall unike ord (n-gram), setningslengde, kollokasjoner.
 
 ***
@@ -383,16 +390,18 @@ Source: Wikicommons.
 
 ---
 
-### Referanser
-
 * Chapman (1973): Linguistics and Literature
 * Slocum (1985):  A Survey of Machine Translation: its   History,   Current   Status,   and Future
 * Maegaard (1999): MLIM—Multilingual Information Management: Current Levels and Future Abilities
 * Papinieni et al. (2002): BLEU: a Method for Automatic Evaluation of Machine Translation
+* Seretan (2011): Syntax-Based Collocation Extraction
 * Voigt and Jurafsky (2012): Towards a Literary Machine Translation: The Role of Referential Cohesion
+* Shutova (2011): Computational Approaches to Figurative Language.
 * Jones and Irvine (2012): The (Un)faithful Machine Translator 
+* Mitkov (2014): Anaphora Resolution
 * Besacier and Schwartz (2015): Automated translation of a literary work : a pilot study.
 * Toral and Way (2015): Translating literary text between related languages using SMT.
+* van Hee (2017): Can Machines Sense Irony?
 * Toral et al. (2018): Post-editing Effort of a Novel With Statistical and Neural Machine Translation.
 
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
