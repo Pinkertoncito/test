@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Maskinoversettelse og fiksjon</title>
+  <meta name="description" content="">
+  <meta name="author" content="Lars Bungum">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/night.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/github.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Introduksjon</h2>
+  
+  
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Innhold</h2>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<ol class = "build incremental">
+<li> Motivasjon</li>
+<li> Hva er maskinoversettelse?</li>
+<li> Historisk oversikt</li>
+<li> Hvordan fungerer maskinoversettelse?</li>
+<li> Kjente problemområder </li>
+<li> Forskell på fiksjon og faksjon; datalingivstens perspektiv</li>
+<li> Utvalgte arbeider på maskinoversettelse av litteraur</li>
+</ol>
+
+<script>
+$('ol.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list
+</script>
+
+  
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Motivasjon</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>&quot;Computational Linguistics&quot; er tidsriktig tverrfaglig</h3>
+
+<p><img src=assets/img/NLP_and_cogsci_black.png style="width: 550px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Hvorfor bedrive maskinoversettelse?</h3>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<ul class = "build incremental">
+<li>AI-komplett problem</li>
+<li>Del av store forskningsspørsmål som:
+
+<ul>
+<li>Hva er språk?</li>
+<li>Hvordan behandler hjernen språk?</li>
+<li>Hvordan representere språk?</li>
+<li>Er kunstig intelligens mulig?</li>
+<li>Hvordan skrive effektive/brukervennlige programmer?</li>
+</ul></li>
+</ul>
+
+<script>
+$('ul.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list
+</script>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Maskinoversettelse definert</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Garvin (1956):</h3>
+
+<p>“The transference of meaning from one patterned set of
+symbols occurring in a given culture ... into another set of
+patterned symbols in another culture.”</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Bente Mægård (1999):</h3>
+
+<p>Any use of computers in going from one language to another</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>FA HQ GP MT</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Restriksjoner  - FAHQ(GP)MT</h3>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<ul class = "build incremental">
+<li>Fully-Automated</li>
+<li>High-Quality</li>
+<li>General Purpose </li>
+<li>Machine Translation</li>
+</ul>
+
+<script>
+$('ul.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list
+</script>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3><red>FA</red> - Helautomatisert</h3>
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/EaeSKUV2zp0" frameborder="0" allowfullscreen></iframe>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>HQ - Høykvalitet</h3>
+
+<p><img src=assets/img/seal-893797_1280.png style="width: 550px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>GP - Generelt formål</h3>
+
+<p><img src=assets/img/text-types-genres_539815373911d_w1500.png style="width: 750px"></p>
+
+<p><span class="footnote">Source: <a href="https://visual.ly?utm_source=content-embed&amp;utm_medium=embed">visual.ly</a></span></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Er FAHQ(GP)MT mulig?</h3>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<ul class = "build incremental">
+<li>Bar-Hillel (1960): nei</li>
+<li>Martin Kay (1980): nei, men &quot;translator&#39;s amanuensis&quot;</li>
+<li>Melby (1980): nei, men mulig for spesifikke domener</li>
+</ul>
+
+<script>
+$('ul.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list
+</script>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><img src=https://miro.medium.com/max/1410/1*w-Pc6z7g1v1DhNGSQ3ilkw.png style="width: 750px"></p>
+
+<p>Source: Wikicommons.</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Historie</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <iframe width="828" height="736" frameborder="0" scrolling="yes" src="http://plot.ly/~larsbun/5.embed"></iframe>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><img src=assets/img/papervis.jpg style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Hovedtyper av maskinoversettelse</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Regelbasert</h3>
+
+<p><img src=assets/img/Direct_translation_and_transfer_translation_pyramid.svg style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Eksempel-basert maskinoversettelse</h3>
+
+<ul class = "build incremental">
+<li>Matching </li>
+<li>Alignment (samstilling)</li>
+<li>Recombination (kombinasjon)</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><a href="https://www.researchgate.net/figure/Example-based-Machine-Translation_fig3_320730405"><img src="https://www.researchgate.net/profile/Muhammad_Irfan174/publication/320730405/figure/fig3/AS:555488848904192@1509450270070/Example-based-Machine-Translation.png" alt="Example-based Machine Translation"/></a></p>
+
+<p>(Mohammad Irfan, 2017)</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Statistisk maskinoversettelse</h3>
+
+<p><img src=assets/img/smtoverview.svg style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Nevrale Nettverk</h3>
+
+<p><img src=assets/img/nnill.png style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Nevral maskinoversettelse (NMT)</h3>
+
+<p><video controls> 
+  <source src=assets/vid/seq2seq_3.mp4 type=video/mp4>
+ /video&gt;</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Evaluering av maskinoversettelse</h2>
+    <ul class = "build incremental">
+<li>Har vært meget kontroversielt blant forskere.</li>
+<li>Hva korrelerer best med menneskelig evaluering?</li>
+<li>BLEU (Papinieni et al., 2002) er et toneangivende system.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><img src=assets/img/bleu.png style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h2>Alternativer til BLEU</h2>
+
+<ul class = "build incremental">
+<li>METEOR (Denkowski og Lavie, 2011, 2015) - tar syntaks og omskrivninger med i betraktning.</li>
+<li>NIST (Doddington, 2002) - mindre frekvente n-gram tilskrives høyere vekt.</li>
+<li>Word Error Rate (ordfeilrate).</li>
+<li>Translation Edit Rate (endringsrate - hvor mange redigering er nødvendig for å få riktig setning).</li>
+<li>Manuell evaluering.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Kjente problemer for maskinoversettelse</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Anafora</h3>
+
+<ul class = "build incremental">
+<li>Hvis babyen ikke trives med råmelken, kok den (Ruslan Mitkov, 2014).</li>
+<li>Myndighetene ville ikke gi demonstrantene tillatelse fordi de fryktet vold.</li>
+<li><p>Forfattaren greia ut om boka.  Veka etter las eg henne.</p></li>
+<li><p>Se, e.g., Suthanker, et al. (2018).</p></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Ordvalg i målspråk (leksikale valg)</h3>
+
+<ul class = "build incremental">
+<li>The temperature rose.</li>
+<li>The temperature fell.</li>
+<li>Kalles &quot;Word Sense Disambiguation&quot;, finnes veldig mye arbeid på dette.  (Par og Saha, 2015).</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Syntaktisk flertydighet</h3>
+
+<ul class = "build incremental">
+<li>Jeg så mannen med kikkerten under broen ved soveposen i transen.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Semantisk flertydighet</h3>
+
+<ul class = "build incremental">
+<li>Det er tanken som teller.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Pragmatisk flertydighet</h3>
+
+<ul class = "build incremental">
+<li>Her var det kaldt!</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Kollokasjoner</h3>
+
+<ul class = "build incremental">
+<li>Følge regelverk.</li>
+<li>Stille til ansvar.</li>
+<li>Se. e.g, Seretan (2011).</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Metaforer</h3>
+
+<ul class = "build incremental">
+<li><p>News travels fast.</p></li>
+<li><p>En kjent metode for er å lage parafraser og bruke dem i maskinoversettelse (Shutova, 2010),</p></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Idiomer</h3>
+
+<ul class = "build incremental">
+<li>Han har ikke gjort en flue fortred.</li>
+<li>&quot;Ikke øl i en sådan stund, rekk meg Løiten&quot; (Nils Arne Eggen, 1996).</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Strukturelle forskjeller på fiksjon og faksjon</h2>
+    <ul class = "build incremental">
+<li>Fordi litteratur er ordets kunst er oppgaven per definisjon den vanskligste (Chapman   1973).</li>
+<li>Jonathan Slocum (1985) avviste idéen.  Relativt lite har vært gjort.</li>
+<li>Korpuslingvistiske mål kan brukes, e.g. antall unike ord (n-gram), setningslengde, kollokasjoner.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Referentiell binding (Referential Cohesion)</h3>
+
+<ul class = "build incremental">
+<li><p>Setninger bindes sammen av meningsinnhold.  Samme referent gjentas flere ganger.</p></li>
+<li><p>Litteratur har høyere grad av referentiell binding enn nyhetstekst (Voigt og Jurafsky, 2012)</p></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><img src=assets/img/referentialcohesion.png style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Arbeider på maskinversettelse av litteratur</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>The (Un)faithful Machine Translator (Jones and Irvine, 2013)</h3>
+
+<ul class = "build incremental">
+<li>Kvalitativ studie av oversettelse av litteratur (Camus, Bonnefoy).</li>
+<li>SMT kan identifisere problemområder</li>
+<li>Fri vs. trofast oversettelse / domestisert vs. fremmed</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Etter-redigering (post-editering)</h3>
+
+<ul class = "build incremental">
+<li>Maskinoversettelse fulgt av post-editering av ikke-profesjonelle (Besacier and Schwartz, 2015). </li>
+<li>Lavere kvalitet, men kan være et alternativ for lavbudsjettoversettelse.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Spesialtilpasset system for nære språk</h3>
+
+<ul class = "build incremental">
+<li>I en oversettelse av Ruiz Zafón ble 20% av setningene helt like mellom maskinoversettelse (SMT) og profesjonelle helt like (Toral og Way, 2015).</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Translatørstudier (Toral et al. 2018)</h3>
+
+<ul class = "build incremental">
+<li>Sammenlikning av SMT og NMT på oversettelse av &#39;Warbreaker&#39; av Brandon Sanderson (1996) (CC).</li>
+<li>Typer oversttelse: H1 (&quot;from scratch&quot;), MT1 (etterredigering av SMT), og MT2 (ereg. av NMT).</li>
+<li>Kapittel 1 består av 3734 ord over 330 setninger.</li>
+<li>Teksten delt opp i 33 oppgaver for hver oversetter, hvor disse kjenner faktorene, men hvem som gjør hva ble randomisert. Totalt 11 jobber for hver type.</li>
+<li>Translatørverktøyet PET ble brukt til å registrere type, setningslengde, tid, tastetrykk, og pauser.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Temporal dimensjon</h3>
+
+<ul class = "build incremental">
+<li>RQ1: Tar oversettelse kortere tid ved etterredigering?</li>
+<li><img src=assets/img/temporal.jpg style="width: 750px"></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Teknisk dimensjon</h3>
+
+<ul class = "build incremental">
+<li>RQ2: Fører etterredigering til færre tastetrykk?</li>
+<li><img src=assets/img/technical.jpg style="width: 750px"></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h3>Kognitiv dimensjon</h3>
+
+<ul class = "build incremental">
+<li>RQ3: Medfører etterredigering mindre kognitiv anstrengelse?</li>
+<li>Målt med å telle pauser.  Ja, færre pauser per produserte ord.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Domain Adaptation</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <h2>Definisjon</h2>
+
+<ul class = "build incremental">
+<li>Å tilpasse et generelt maskinoversettelsesssytem til et spesifikt tekstdomene (ofte et emne, men kan også være stilistisk)</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <p><img src=assets/img/damt.svg style="width: 750px"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Fremtiden?!</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+   <section class='' data-state=''>
+    <ul class = "build incremental">
+<li>Post-editing</li>
+<li>Enormt publikasjonstrykk</li>
+<li>Ikke undervurder AI (AlphaGo, DeepMind, etc)</li>
+<li>Behov for veldig mye oversettelse</li>
+<li>Bruk det som et verktøy</li>
+<li>Domain Adaptation</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   
+</section>
+<section class='' data-state='' id='slide-14'>
+  <h2>Spørsmål?  Kommentarer?</h2>
+  
+  
+</section>
+<section class='' data-state='' id='slide-15'>
+  <h3>Referanser</h3>
+  <ul>
+<li>Chapman (1973): Linguistics and Literature</li>
+<li>Slocum (1985):  A Survey of Machine Translation: its   History,   Current   Status,   and Future</li>
+<li>Maegaard (1999): MLIM—Multilingual Information Management: Current Levels and Future Abilities</li>
+<li>Papinieni et al. (2002): BLEU: a Method for Automatic Evaluation of Machine Translation</li>
+<li>Voigt and Jurafsky (2012): Towards a Literary Machine Translation: The Role of Referential Cohesion</li>
+<li>Jones and Irvine (2012): The (Un)faithful Machine Translator </li>
+<li>Besacier and Schwartz (2015): Automated translation of a literary work : a pilot study.</li>
+<li>Toral and Way (2015): Translating literary text between related languages using SMT.</li>
+<li>Toral et al. (2018): Post-editing Effort of a Novel With Statistical and Neural Machine Translation.</li>
+</ul>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Animated List -->
+
+<!-- > 1. Abc -->
+
+<!-- > 2. CDF -->
+
+<!-- > 3. 33jsdf -->
+
+<!-- <script> -->
+
+<!-- $('ol.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list -->
+
+<!-- </script> -->
+
+<!-- <br> -->
+
+<!-- With a little bit of HTML, we can do all sorts of things. -->
+
+<!-- --- -->
+
+<!-- <ol> -->
+
+<!-- <li class="fragment roll-in">roll-in</p> -->
+
+<!-- <li class="fragment fade-in">fade-in</p> -->
+
+<!-- <li class="fragment highlight-red">highlight-red</p> -->
+
+<!-- <li class="fragment highlight-green">highlight-green</p> -->
+
+<!-- <li class="fragment highlight-blue">highlight-blue</p> -->
+
+<!-- </ol> -->
+
+<!-- <div class="fragment grow">grow</div> -->
+
+<!-- <div class="fragment shrink">shrink</div> -->
+
+<!-- ---  -->
+
+<!-- ## Incremental Reveal -->
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- These points should be animated -->
+
+<!-- > * Point 1 -->
+
+<!-- > * .highlight-red Point 2 -->
+
+<!-- > * .grow Point 3 -->
+
+<!-- <script> -->
+
+<!-- $('ul.incremental li').addClass('fragment')//note to anyone reading this code, you may need to change to ul from ol depending on ordered vs unordered list -->
+
+<!-- </script> -->
+
+<!-- --- -->
+
+<!-- ## Fragmented Views -->
+
+<!-- Hit the next arrow... -->
+
+<!-- .fragment ... to step through ... -->
+
+<!-- > * any type -->
+
+<!-- .fragment of view -->
+
+<!-- --- -->
+
+<!-- ## Incremental Reveal -->
+
+<!-- These points should be animated -->
+
+<!-- > - Point 1 -->
+
+<!-- > - .highlight-red Point 2 -->
+
+<!-- > - .grow Point 3 -->
+
+<!-- <script> -->
+
+<!-- $('ul.incremental li').addClass('fragment') -->
+
+<!-- </script> -->
+
+  
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'night', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
